@@ -1,5 +1,7 @@
+//  ArbreBin.c
 #include <stdio.h>
 #include <stdlib.h>
+
 typedef struct noeud {
     char c;
     int n;
@@ -46,12 +48,40 @@ void insererFG(noeud *enfant_a_inserer, noeud *root, int num_parent) {
            enfant_a_inserer->c, enfant_a_inserer->n, parent->c, parent->n);
 }
 
+
 void parcourPrefixe(noeud *n){
     if(n == NULL)return;
     printf("%c ", n->c);
     parcourPrefixe(n->gauche);
     parcourPrefixe(n->droite);
 }
+void parcoursInfixe(noeud *n) {
+    if (n == NULL) return;
+    parcoursInfixe(n->gauche);
+    printf("%c ", n->c);
+    parcoursInfixe(n->droite);
+}
+
+void parcoursPostfixe(noeud *n) {
+    if (n == NULL) return;
+    parcoursPostfixe(n->gauche);
+    parcoursPostfixe(n->droite);
+    printf("%c ", n->c);
+}
+
+
+noeud* creerArbreRecursif(int h, char *c) {
+    if (h == 0) return NULL;
+
+    noeud *n = nouvNoeud(*c, *c);
+    (*c)++;
+
+    n->gauche = creerArbreRecursif(h - 1, c);
+    n->droite = creerArbreRecursif(h - 1, c);
+
+    return n;
+}
+
 void libererArbre(noeud *n) {
     if (n == NULL) return;
     libererArbre(n->gauche);

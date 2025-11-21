@@ -8,9 +8,9 @@ typedef struct {
 } Graphe;
 
 // Prototypes des fonctions
-Graphe* creer_graphe();
 void liberer_graphe(Graphe* G);
 void coloration_welsh_powell(int **adj, int n, int *couleurs);
 void afficher_coloration(int *couleurs, int n);
-
+Graphe* chargeGraphe(FILE* fp);
+void testerGraphe(Graphe* G);
 #endif

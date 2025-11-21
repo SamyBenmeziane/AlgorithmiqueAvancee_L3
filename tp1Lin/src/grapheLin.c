@@ -72,9 +72,8 @@ void coloration_welsh_powell_lin(int *adj, int n, int *couleurs) {
 }
 
 void afficher_coloration(int *couleurs, int n) {
-    printf("Sommets : ");
-    for (int i = 0; i < n; i++) printf("%d ", i);
-    printf("\nCouleurs : ");
-    for (int i = 0; i < n; i++) printf("%d ", couleurs[i]);
+    printf("(Sommets , Couleurs ) : ");
+    for (int i = 0; i < n; i++)
+        printf("(%d, %d)   ", i, couleurs[i]);
     printf("\n");
 }

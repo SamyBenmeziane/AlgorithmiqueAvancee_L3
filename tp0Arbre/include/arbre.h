@@ -21,5 +21,7 @@ void insererFG(noeud *n, noeud *root, int num_noeud);
 
 void parcourPrefixe(noeud *n);
 void libererArbre(noeud *n);
-
+void parcoursInfixe(noeud *n);
+void parcoursPostfixe(noeud *n);
+noeud* creerArbreRecursif(int h, char *c);
 #endif 

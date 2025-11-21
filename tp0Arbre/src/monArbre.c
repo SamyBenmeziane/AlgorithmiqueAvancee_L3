@@ -5,19 +5,23 @@
 
 int main() {
  
-    noeud *arbre = nouvNoeud('A', 1);
+   
+char c = 'A';
+noeud *arbre = creerArbreRecursif(4, &c);
 
-    noeud *n2 = nouvNoeud('B', 2);
-    noeud *n3 = nouvNoeud('C', 3);
-    noeud *n4 = nouvNoeud('D', 4);
-
-    
-    insererFG(n2, arbre, 1);
-    insererFG(n3, arbre, 1);  
-    insererFG(n4, arbre, 3);
     
     printf("\nParcours Prefixe: ");
     parcourPrefixe(arbre); 
+    printf("\n");
+
+
+
+       printf("Parcours infixe   : ");
+    parcoursInfixe(arbre);
+    printf("\n");
+
+    printf("Parcours postfixe : ");
+    parcoursPostfixe(arbre);
     printf("\n");
 
     noeud *recherche = rechercheNoeud(arbre, 3);

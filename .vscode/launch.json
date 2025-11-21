@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/samyb/OneDrive - Université de Paris/L3_info_pariscite/s5/Algorithmique avancée/tp/tp12",
-      "program": "c:/Users/samyb/OneDrive - Université de Paris/L3_info_pariscite/s5/Algorithmique avancée/tp/tp12/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
